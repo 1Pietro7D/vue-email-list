@@ -28,6 +28,12 @@
 
     <!-- #region javascript-->
     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"
+      integrity="sha512-nqIFZC8560+CqHgXKez61MI0f9XSTKLkm0zFVm/99Wt0jSTZ7yeeYwbzyl0SGn/s8Mulbdw+ScCG41hmO2+FKw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
       integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
       crossorigin="anonymous"
@@ -45,7 +51,9 @@
   </head>
   <body>
     <!-- #region Vue -->
-    <div id="app"></div>
+    <div id="app">
+      <div v-for="email in emails">{{ email }}</div>
+    </div>
     <!-- #endregion Vue -->
   </body>
 </html>
