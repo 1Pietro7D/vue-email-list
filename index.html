@@ -52,7 +52,15 @@
   <body>
     <!-- #region Vue -->
     <div id="app">
-      <div v-for="email in emails">{{ email }}</div>
+      <div v-if="loading">loading</div>
+      <div v-else class="d-flex">
+        <div class="mright-2rem">
+          <div v-for="number in telephoneNumbers">{{ number }}</div>
+        </div>
+        <div>
+          <div v-for="email in emails">{{ email }}</div>
+        </div>
+      </div>
     </div>
     <!-- #endregion Vue -->
   </body>
