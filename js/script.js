@@ -17,6 +17,9 @@ const app = new Vue({
           if (status === 200) {
             this.emails.push(data.response);
           }
+        })
+        .catch((error) => {
+          console.warn("Error", error);
         });
       axios
         .get("https://flynn.boolean.careers/exercises/api/random/phone")
@@ -30,6 +33,9 @@ const app = new Vue({
           if (index == countdown - 1) {
             this.loading = false;
           }
+        })
+        .catch((error) => {
+          console.warn("Error", error);
         });
     }
   },
